@@ -3,6 +3,6 @@ from . import views
 
 app_name = 'votes'
 
-urlpatterns = {
+urlpatterns = [
     path('', views.index, name='index')
-}
+]
