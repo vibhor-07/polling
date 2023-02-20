@@ -1,9 +1,11 @@
 FROM python:3
 
-COPY . .
+RUN mkdir polling_app
+COPY . /polling_app
+WORKDIR /polling_app
 
 RUN pip install -r requirments.txt
-RUN cd voting
+WORKDIR /polling_app/voting
 RUN python manage.py migrate
 
 EXPOSE 8000
