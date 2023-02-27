@@ -28,5 +28,14 @@ Create a Docker image:
 2) Create and push the image on dockerhub
 
 Deployment:
-1) Create required infrastructure using IAC code.
+1) Create the required infrastructure using IAC(Terraform) code.
+    i) Create VPC.
+   ii) Create AutoScaling Group
+  iii) Create an instance to install Jenkins for CI/CD pipeline.
+   iv) Create an EKS cluster.
 2) Deploy the application on the EKS cluster.
+    i) Create a Deployment using the declarative method (yml file).
+   ii) Create a Service using the declarative method (yml file).
+3) Routing
+    i) Generate Elastic IP and attach it to the cluster.
+   ii) Make the cluster available on the required URL using Route53.
